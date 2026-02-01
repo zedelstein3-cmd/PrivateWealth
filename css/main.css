@@ -27,10 +27,12 @@
 *::after {
   box-sizing: border-box;
 }
+
 /* Emphasize Academic Projects in nav */
 .nav-emphasis {
   font-weight: 600;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -435,6 +437,32 @@ button:focus-visible {
   z-index: 1;
 }
 
+/* ==========================================================
+   HERO IMAGE DUPLICATION CONTROL (FIX)
+   Desktop: show desktop version (right column)
+   Mobile: show mobile version (under name)
+   IMPORTANT: the hero blocks have BOTH classes:
+     class="hero-image hero-image-mobile"
+     class="hero-image hero-image-desktop"
+   So we must target the combined selector to beat `.hero-image { display:flex }`.
+   ========================================================== */
+
+.hero-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Desktop-first defaults */
+.hero-image.hero-image-mobile {
+  display: none;
+}
+
+.hero-image.hero-image-desktop {
+  display: flex;
+}
+
 /* ===========================
    SNAPSHOT
    =========================== */
@@ -788,13 +816,6 @@ button:focus-visible {
     align-items: center;
   }
 
-  .hero-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
   .skills-grid,
   .coursework-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -835,8 +856,15 @@ button:focus-visible {
     padding-top: 4.5rem;
   }
 
+  /* ✅ CHANGE #1 (MOBILE ONLY): center the name */
   .hero-title {
     font-size: 2.25rem;
+    text-align: center;
+  }
+
+  /* Optional (helps the “slide” feel match your screenshot) */
+  .hero-label {
+    text-align: center;
   }
 
   .container {
@@ -851,23 +879,45 @@ button:focus-visible {
     max-width: 40rem;
   }
 
-  .hero-ctas {
-    flex-direction: column;
-    align-items: stretch;
+  /* ✅ CHANGE #2 (MOBILE ONLY): desktop CTA block should NOT show on mobile */
+  .hero-ctas-desktop {
+    display: none !important;
   }
 
-  .hero-ctas .btn {
+  /* ✅ CHANGE #3 (MOBILE ONLY): mobile CTA block becomes a stacked group under tags */
+  .hero-ctas-mobile {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 520px;
+    margin-top: 0.85rem;     /* space under hashtags before buttons */
+    gap: 0.6rem;
+  }
+
+  .hero-ctas-mobile .btn {
     width: 100%;
     justify-content: center;
   }
 
-  .hero-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0.5rem;
+  /* MOBILE HERO VISIBILITY:
+     Show the inline/mobile image, hide the right/desktop image */
+  .hero-image.hero-image-desktop {
+    display: none !important;
   }
 
+  .hero-image.hero-image-mobile {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+
+    /* ✅ CHANGE #4 (MOBILE ONLY): more space between name and photo */
+    margin-top: 1.35rem;     /* increased from 0.85rem */
+    margin-bottom: 1.25rem;  /* space before highlights */
+    width: 100%;
+  }
+
+  /* Keep your photo sizing exactly as you already had on mobile */
   .hero-photo-wrap {
     width: 280px;
     height: 320px;
@@ -879,6 +929,7 @@ button:focus-visible {
     left: -20px;
   }
 
+  /* Hashtags spacing stays natural */
   .hero-tags {
     margin-top: 0.75rem;
   }
@@ -923,6 +974,20 @@ button:focus-visible {
     padding: 0;
     border-radius: 0;
   }
+
+  /* Desktop-only: enforce visibility */
+  .hero-image.hero-image-desktop {
+    display: flex;
+  }
+
+  .hero-image.hero-image-mobile {
+    display: none;
+  }
+
+  /* Desktop-only: keep mobile CTA hidden even if HTML exists */
+  .hero-ctas-mobile {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -963,6 +1028,7 @@ button:focus-visible {
     gap: 0.5rem;
   }
 }
+
 /* =========================
    PROJECT CARD BUTTONS
    (Academic Projects)
