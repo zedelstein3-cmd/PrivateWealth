@@ -75,6 +75,65 @@
 
           <h1 class="hero-title">Zachary Edelstein</h1>
 
+          <!-- ✅ MOBILE VERSION ONLY (CSS controls visibility):
+               Photo + tags + mobile CTAs directly under tags on phone.
+               Hidden on desktop. -->
+          <div class="hero-image hero-image-mobile" aria-hidden="true">
+            <div class="hero-photo-wrap">
+              <div class="hero-photo-bg"></div>
+              <img
+                src="assets/IMG_6516.JPG"
+                alt=""
+                class="hero-photo"
+              />
+            </div>
+
+            <div class="hero-tags" aria-hidden="true">
+              <span>#PrivateWealthManagement</span>
+              <span>#CorporateFinanceHonors</span>
+              <span>#McCombs</span>
+            </div>
+
+            <!-- ✅ MOBILE-ONLY BUTTONS -->
+            <div class="hero-ctas hero-ctas-mobile" aria-hidden="true">
+              <a
+                href="assets/RESUME 2026.pdf"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="btn-icon" aria-hidden="true">⤓</span>
+                Download Resume
+              </a>
+
+              <!-- ✅ SEE PROJECTS (mobile) -->
+              <a href="#projects" class="btn btn-primary">
+                <span class="btn-icon" aria-hidden="true">☑</span>
+                See Projects
+              </a>
+
+              <a href="mailto:zedelstein3@gmail.com" class="btn btn-secondary">
+                <span class="btn-icon" aria-hidden="true">✉</span>
+                Email Me
+              </a>
+
+              <a href="sms:9563124280" class="btn btn-secondary">
+                <span class="btn-icon" aria-hidden="true">💬</span>
+                Text/Call Zach
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/zacharyedelstein"
+                class="btn btn-tertiary"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="btn-icon" aria-hidden="true">in</span>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
           <ul class="hero-highlights">
             <li>
               Corporate Finance Honors student at the McCombs School of Business, focused on
@@ -98,7 +157,8 @@
             </li>
           </ul>
 
-          <div class="hero-ctas">
+          <!-- ✅ DESKTOP CTAs (CSS will hide this block on mobile) -->
+          <div class="hero-ctas hero-ctas-desktop">
             <a
               href="assets/RESUME 2026.pdf"
               class="btn btn-primary"
@@ -107,6 +167,12 @@
             >
               <span class="btn-icon" aria-hidden="true">⤓</span>
               Download Resume
+            </a>
+
+            <!-- ✅ SEE PROJECTS (desktop) -->
+            <a href="#projects" class="btn btn-primary">
+              <span class="btn-icon" aria-hidden="true">☑</span>
+              See Projects
             </a>
 
             <a href="mailto:zedelstein3@gmail.com" class="btn btn-secondary">
@@ -118,11 +184,22 @@
               <span class="btn-icon" aria-hidden="true">💬</span>
               Text/Call Zach
             </a>
+
+            <a
+              href="https://www.linkedin.com/in/zacharyedelstein"
+              class="btn btn-tertiary"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="btn-icon" aria-hidden="true">in</span>
+              LinkedIn
+            </a>
           </div>
         </div>
 
-        <!-- RIGHT: PHOTO + TAGS -->
-        <div class="hero-image">
+        <!-- ✅ DESKTOP VERSION ONLY (CSS controls visibility):
+             This is the ONLY hero image that should appear on desktop (right column). -->
+        <div class="hero-image hero-image-desktop" aria-hidden="false">
           <div class="hero-photo-wrap">
             <div class="hero-photo-bg"></div>
             <img
@@ -268,111 +345,111 @@
       </div>
     </section>
 
-   <!-- ==================
-     ACADEMIC PROJECTS (CONDENSED FOR PRIVATE WEALTH)
-     ================== -->
-<section id="projects" class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Academic Projects</h2>
-    <p class="section-subtitle">
-      Selected valuation, markets, and modeling projects demonstrating private wealth–relevant analysis.
-    </p>
-
-    <div class="projects-grid">
-      <!-- BLOCK 1 -->
-      <article class="card project-card">
-        <p class="project-tag">Strategic Analysis · Risk Considerations</p>
-        <h3 class="project-title">
-          Strategic Acquisition Pitch Deck — Chevron Corporation × Petróleos de Venezuela, S.A. (PDVSA)
-        </h3>
-        <p class="project-description">
-          Acquisition pitch focused on strategic rationale, valuation logic, and execution risk.
+    <!-- ==================
+         ACADEMIC PROJECTS (CONDENSED FOR PRIVATE WEALTH)
+         ================== -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Academic Projects</h2>
+        <p class="section-subtitle">
+          Selected valuation, markets, and modeling projects demonstrating private wealth–relevant analysis.
         </p>
-        <ul class="project-bullets">
-          <li>Developed acquisition thesis highlighting strategic fit and value creation drivers.</li>
-          <li>Structured valuation and synergy framework to support investment case.</li>
-          <li>Built pitch materials aligned with professional presentation standards.</li>
-          <li><strong>Status:</strong> Work in progress.</li>
-        </ul>
 
-        <div class="project-actions">
-          <a class="project-btn project-btn-ppt" href="#" aria-disabled="true">Pitch Deck</a>
-          <a class="project-btn project-btn-excel" href="#" aria-disabled="true">Excel</a>
-        </div>
-      </article>
+        <div class="projects-grid">
+          <!-- BLOCK 1 -->
+          <article class="card project-card">
+            <p class="project-tag">Strategic Analysis · Risk Considerations</p>
+            <h3 class="project-title">
+              Strategic Acquisition Pitch Deck — Chevron Corporation × Petróleos de Venezuela, S.A. (PDVSA)
+            </h3>
+            <p class="project-description">
+              Acquisition pitch focused on strategic rationale, valuation logic, and execution risk.
+            </p>
+            <ul class="project-bullets">
+              <li>Developed acquisition thesis highlighting strategic fit and value creation drivers.</li>
+              <li>Structured valuation and synergy framework to support investment case.</li>
+              <li>Built pitch materials aligned with professional presentation standards.</li>
+              <li><strong>Status:</strong> Work in progress.</li>
+            </ul>
 
-      <!-- BLOCK 2 -->
-      <article class="card project-card">
-        <p class="project-tag">Excel/VBA · Portfolio Optimization</p>
-        <h3 class="project-title">Stock Portfolio Optimizer (Excel + VBA)</h3>
-        <p class="project-description">
-          Automated Excel-based portfolio analytics and optimization tool.
-        </p>
-        <ul class="project-bullets">
-          <li>Used Advanced Excel to model portfolio beta, sharpe ratio, covarience, ext.</li>
-          <li>Modeled returns, volatility, correlation, and covariance across assets.</li>
-          <li>Applied Modern Portfolio Theory and efficient frontier analysis.</li>
-          <li>Automated workflows using VBA for dynamic asset and table management.</li>
-          <li>Designed scalable, decision-oriented investment outputs.</li>
-        </ul>
+            <div class="project-actions">
+              <a class="project-btn project-btn-ppt" href="#" aria-disabled="true">Pitch Deck</a>
+              <a class="project-btn project-btn-excel" href="#" aria-disabled="true">Excel</a>
+            </div>
+          </article>
 
-        <div class="project-actions">
-          <a
-            class="project-btn project-btn-excel"
-            href="assets/STOCK PORTFOLIO OPTIMIZER.xlsm"
-            target="_blank"
-            rel="noopener"
-          >
-            Excel
-          </a>
-        </div>
-      </article>
+          <!-- BLOCK 2 -->
+          <article class="card project-card">
+            <p class="project-tag">Excel/VBA · Portfolio Optimization</p>
+            <h3 class="project-title">Stock Portfolio Optimizer (Excel + VBA)</h3>
+            <p class="project-description">
+              Automated Excel-based portfolio analytics and optimization tool.
+            </p>
+            <ul class="project-bullets">
+              <li>Used Advanced Excel to model portfolio beta, sharpe ratio, covarience, ext.</li>
+              <li>Modeled returns, volatility, correlation, and covariance across assets.</li>
+              <li>Applied Modern Portfolio Theory and efficient frontier analysis.</li>
+              <li>Automated workflows using VBA for dynamic asset and table management.</li>
+              <li>Designed scalable, decision-oriented investment outputs.</li>
+            </ul>
 
-      <!-- BLOCK 3 -->
-      <article class="card project-card">
-        <p class="project-tag">DCF · Capital Budgeting</p>
-        <h3 class="project-title">
-          DCF — Baldwin Company Capital Investment Analysis (Excel)
-        </h3>
-        <p class="project-description">
-          Capital budgeting analysis under uncertainty for major equipment investment.
-        </p>
-        <ul class="project-bullets">
-          <li>Built full DCF model using NPV, IRR, payback, and sensitivity analysis.</li>
-          <li>Evaluated downside risk through scenario and expected value analysis.</li>
-          <li>Isolated key value drivers across revenues, costs, and capex.</li>
-          <li>Produced investment recommendation consistent with IC-style decision making.</li>
-        </ul>
+            <div class="project-actions">
+              <a
+                class="project-btn project-btn-excel"
+                href="assets/STOCK PORTFOLIO OPTIMIZER.xlsm"
+                target="_blank"
+                rel="noopener"
+              >
+                Excel
+              </a>
+            </div>
+          </article>
 
-        <div class="project-actions">
-          <a
-            class="project-btn project-btn-excel"
-            href="assets/Baldwin Company Case -ZacharyEdelstein.xlsx"
-            target="_blank"
-            rel="noopener"
-          >
-            Excel
-          </a>
-        </div>
-      </article>
+          <!-- BLOCK 3 -->
+          <article class="card project-card">
+            <p class="project-tag">DCF · Capital Budgeting</p>
+            <h3 class="project-title">
+              DCF — Baldwin Company Capital Investment Analysis (Excel)
+            </h3>
+            <p class="project-description">
+              Capital budgeting analysis under uncertainty for major equipment investment.
+            </p>
+            <ul class="project-bullets">
+              <li>Built full DCF model using NPV, IRR, payback, and sensitivity analysis.</li>
+              <li>Evaluated downside risk through scenario and expected value analysis.</li>
+              <li>Isolated key value drivers across revenues, costs, and capex.</li>
+              <li>Produced investment recommendation consistent with IC-style decision making.</li>
+            </ul>
 
-      <!-- BLOCK 4 -->
-      <article class="card project-card">
-        <p class="project-tag">Acquisition Finance · Capital Structure</p>
-        <h3 class="project-title">
-          Presario Ventures Acquisition &amp; Financing Analysis (Excel)
-        </h3>
-        <p class="project-description">
-          Acquisition valuation and financing structure analysis for a $27M real estate transaction.
-        </p>
-        <ul class="project-bullets">
-          <li>Valued acquisition under debt and equity financing structures.</li>
-          <li>Analyzed leverage, dilution, tax shields, and WACC implications.</li>
-          <li>Modeled post-deal equity value, share issuance, and price impact.</li>
-          <li>Stress-tested outcomes to identify break-even and value-destruction thresholds.</li>
-        </ul>
+            <div class="project-actions">
+              <a
+                class="project-btn project-btn-excel"
+                href="assets/Baldwin Company Case -ZacharyEdelstein.xlsx"
+                target="_blank"
+                rel="noopener"
+              >
+                Excel
+              </a>
+            </div>
+          </article>
 
-        <div class="project-actions" aria-label="Project files">
+          <!-- BLOCK 4 -->
+          <article class="card project-card">
+            <p class="project-tag">Acquisition Finance · Capital Structure</p>
+            <h3 class="project-title">
+              Presario Ventures Acquisition &amp; Financing Analysis (Excel)
+            </h3>
+            <p class="project-description">
+              Acquisition valuation and financing structure analysis for a $27M real estate transaction.
+            </p>
+            <ul class="project-bullets">
+              <li>Valued acquisition under debt and equity financing structures.</li>
+              <li>Analyzed leverage, dilution, tax shields, and WACC implications.</li>
+              <li>Modeled post-deal equity value, share issuance, and price impact.</li>
+              <li>Stress-tested outcomes to identify break-even and value-destruction thresholds.</li>
+            </ul>
+
+            <div class="project-actions" aria-label="Project files">
               <a
                 class="project-btn project-btn-excel"
                 href="assets/Zachary Edelstein Case 3.xlsx"
@@ -507,53 +584,51 @@
               <li>Eligible to work in the U.S. with no restrictions.</li>
             </ul>
           </div>
-
-          
         </div>
       </div>
     </section>
 
-
-   <!-- ==================
-     HONORS + INTERESTS
-     ================== -->
-<section id="honors" class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Honors & Interests</h2>
-    <p class="section-subtitle">
-      Recognitions and personal interests reflecting long-term commitment and balance.
-    </p>
-
-    <div class="projects-grid">
-      <!-- HONORS -->
-      <article class="card">
-        <h3 class="skills-heading">Honors</h3>
-        <ul>
-          <li>Eagle Scout <span class="tag-status">Fall 2020</span></li>
-          <li>Hispanic Scholarship Fund (HSF) – YLI <span class="tag-status">Summer 2022</span></li>
-          <li>President’s Gold Volunteer Service Award <span class="tag-status">Fall 2020</span></li>
-        </ul>
-
-        <p class="coursework-note">
-          These recognitions reflect consistency, responsibility, and leadership over time.
+    <!-- ==================
+         HONORS + INTERESTS
+         ================== -->
+    <section id="honors" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Honors & Interests</h2>
+        <p class="section-subtitle">
+          Recognitions and personal interests reflecting long-term commitment and balance.
         </p>
-      </article>
 
-      <!-- INTERESTS (UNCHANGED STYLE) -->
-      <article class="card">
-        <h3 class="skills-heading">Interests</h3>
-        <ul>
-          <li>World travel!</li>
-          <li>Addicted to Weird Foods</li>
-          <li>College football (Hook ’Em Horns!)</li>
-        </ul>
-         <p class="coursework-note">
-          Feel free to ask me about any of these or talk about yours!
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
+        <div class="projects-grid">
+          <!-- HONORS -->
+          <article class="card">
+            <h3 class="skills-heading">Honors</h3>
+            <ul>
+              <li>Eagle Scout <span class="tag-status">Fall 2020</span></li>
+              <li>Hispanic Scholarship Fund (HSF) – YLI <span class="tag-status">Summer 2022</span></li>
+              <li>President’s Gold Volunteer Service Award <span class="tag-status">Fall 2020</span></li>
+            </ul>
+
+            <p class="coursework-note">
+              These recognitions reflect consistency, responsibility, and leadership over time.
+            </p>
+          </article>
+
+          <!-- INTERESTS -->
+          <article class="card">
+            <h3 class="skills-heading">Interests</h3>
+            <ul>
+              <li>World travel!</li>
+              <li>Addicted to Weird Foods</li>
+              <li>College football (Hook ’Em Horns!)</li>
+            </ul>
+            <p class="coursework-note">
+              Feel free to ask me about any of these or talk about yours!
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ==================
          LEADERSHIP & ACTIVITIES
          ================== -->
